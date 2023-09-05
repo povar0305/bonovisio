@@ -23,10 +23,8 @@ button {
 }
 .header {
     display: flex;
-    padding-top: 16px;
     align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 16px 50px 12px 50px;
     @media (max-width: $ipad-size) {
         width: 100%;
         justify-content: space-between;
@@ -163,5 +161,95 @@ button {
         &--opend {
             display: none;
         }
+    }
+}
+
+.about {
+    background: $primary-color;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 69px;
+    width: 100%;
+    &__inner {
+        padding-left: 161px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+    }
+    &__accent {
+        color: $accent-color;
+        transform: rotate(-90deg);
+        position: absolute;
+        font-size: 51px;
+        top: 130px;
+        left: 89px;
+    }
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        padding-left: 119px;
+        &--date {
+            color: white;
+            font-size: 60px;
+        }
+        &--title {
+            font-weight: bold;
+            color: white;
+            font-size: 110px;
+        }
+    }
+    &__partners {
+        display: flex;
+        margin-top: 25px;
+        & img {
+            object-fit: contain;
+            margin-right: 35px;
+        }
+    }
+    &__registr {
+        background: $additional-color;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.67px;
+        padding: 13px 26px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-top: 91px;
+        transition: $transition;
+        max-width: 432px;
+        &:hover {
+            background: $accent-color;
+            color: $primary-color;
+        }
+        margin-bottom: 48px;
+    }
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        max-width: 521px;
+        &--p2 {
+            color: white;
+            font-size: 20px;
+            line-height: 130%;
+            padding-bottom: 41px;
+        }
+        &--p3 {
+            color: white;
+            font-size: 18px;
+            line-height: 140%;
+            padding-bottom: 48px;
+        }
+    }
+    &__bg{
+        position: absolute;
+        right: 38px;top: 32px;width: 379px;
+    }
+    &__arrow{
+        display: flex;justify-content: center;
+        width: 100%;
+        padding-bottom: 89px;
     }
 }
