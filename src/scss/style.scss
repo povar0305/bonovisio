@@ -1,4 +1,76 @@
-@import 'base/*.scss';
-@import 'global/*.scss';
-@import '**/_*.scss';
-@import '../components/**/*.scss';
+@import "base/*.scss";
+@import "global/*.scss";
+@import "**/_*.scss";
+@import "../components/**/*.scss";
+$primary-color: #0a2756;
+$additional-color: #007dfe;
+$accent-color: #ffb32c;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+}
+
+a,
+button {
+    transition: 0.2s;
+}
+.header {
+    
+    display: flex;
+    padding-top: 16px;
+    align-items: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    &__logo {
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-right: 24px;
+    }
+    &__vertical-line {
+        background-color: #c4c4c4;
+        width: 1px;
+        margin-right: 24px;
+        align-self: normal;
+    }
+    &__link {
+        color: $primary-color;
+        text-decoration: none;
+        margin-right: 24px;
+        &:hover {
+            color: $additional-color;
+        }
+    }
+    &__btn-outline {
+        padding: 8px 30px;
+        border: 1px solid $additional-color;
+        color: $additional-color;
+        margin-right: 129px;
+        &:hover {
+            color: white;
+            border-color: $primary-color;
+            background: $primary-color;
+            cursor: pointer;
+        }
+    }
+    &__rectangle {
+        background: $primary-color;
+        border-radius: 3px;
+        width: 24.5px;
+        height: 18.8px;
+        margin-right: 15px;
+    }
+    &__facebook{
+        text-transform: uppercase;
+        text-decoration: none;
+        color:$primary-color;
+        &:hover{
+            color: $additional-color;
+        }
+
+    }
+}
