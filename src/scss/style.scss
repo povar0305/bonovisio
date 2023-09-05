@@ -5,7 +5,9 @@
 $primary-color: #0a2756;
 $additional-color: #007dfe;
 $accent-color: #ffb32c;
+$transition: 0.2s;
 
+$ipad-size: 768px;
 body {
     display: flex;
     flex-direction: column;
@@ -17,60 +19,149 @@ body {
 
 a,
 button {
-    transition: 0.2s;
+    transition: $transition;
 }
 .header {
-    
     display: flex;
     padding-top: 16px;
     align-items: center;
     padding-right: 50px;
     padding-left: 50px;
+    @media (max-width: $ipad-size) {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &__logo {
         color: $primary-color;
         text-transform: uppercase;
         margin-right: 24px;
+        font-size: 29px;
     }
     &__vertical-line {
         background-color: #c4c4c4;
         width: 1px;
         margin-right: 24px;
         align-self: normal;
-    }
-    &__link {
-        color: $primary-color;
-        text-decoration: none;
-        margin-right: 24px;
-        &:hover {
-            color: $additional-color;
+        @media (max-width: $ipad-size) {
+            display: none;
         }
     }
+    &.opened {
+        height: 100vh;
+        align-items: flex-start;
+        & .header {
+            &__links {
+                @media (max-width: $ipad-size) {
+                    display: flex;
+                    order: 10;
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+                    order: 2;
+                    & a {
+                        font-size: 22px;
+                        padding-bottom: 15px;
+                        margin-right: 0;
+                    }
+                }
+            }
+            &__menu--hide {
+                display: none;
+            }
+            &__menu--opend {
+                display: block;
+            }
+            &__btn-outline {
+                order: 3;
+                display: flex;
+                margin: auto;
+            }
+            &__icons {
+                width: 100%;
+                display: flex;
+                order: 4;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__links {
+        @media (max-width: $ipad-size) {
+            display: none;
+        }
+        & a {
+            color: $primary-color;
+            text-decoration: none;
+            margin-right: 24px;
+            font-size: 16px;
+            &:hover {
+                color: $additional-color;
+            }
+        }
+    }
+
     &__btn-outline {
         padding: 8px 30px;
         border: 1px solid $additional-color;
         color: $additional-color;
         margin-right: 129px;
+        font-size: 16px;
         &:hover {
             color: white;
             border-color: $primary-color;
             background: $primary-color;
             cursor: pointer;
         }
+        @media (max-width: $ipad-size) {
+            display: none;
+        }
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        @media (max-width: $ipad-size) {
+            display: none;
+        }
     }
     &__rectangle {
-        background: $primary-color;
-        border-radius: 3px;
-        width: 24.5px;
-        height: 18.8px;
         margin-right: 15px;
+        &:hover path,
+        &:hover rect {
+            fill: $additional-color;
+            cursor: pointer;
+        }
     }
-    &__facebook{
+    &__facebook {
         text-transform: uppercase;
         text-decoration: none;
-        color:$primary-color;
-        &:hover{
-            color: $additional-color;
+        transition: $transition;
+        &:hover path {
+            fill: $additional-color;
+            cursor: pointer;
+        }
+    }
+    &__menu {
+        display: none;
+        transition: $transition;
+        & svg {
+            fill: $primary-color;
+            &:hover path,
+            &:hover line {
+                fill: $additional-color;
+                stroke: $additional-color;
+            }
+        }
+        &:hover svg {
+            fill: $additional-color;
+            cursor: pointer;
+        }
+        @media (max-width: $ipad-size) {
+            display: flex;
         }
 
+        &--opend {
+            display: none;
+        }
     }
 }
