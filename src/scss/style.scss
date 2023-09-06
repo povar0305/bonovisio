@@ -453,3 +453,81 @@ button {
         content: "";
     }
 }
+
+.form {
+    padding: 139px 220px;
+    background: $primary-color;
+    width: 100%;
+    &__title {
+        color: white;
+        font-size: 60px;
+        padding-bottom: 60px;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & input {
+            background: white;
+            border: 1px solid transparent;
+            &.error {
+                border: 1px solid #fb5555;
+            }
+        }
+        &--name,
+        &--email {
+            width: calc(50% - 13px);
+            padding: 11px 20px;
+        }
+        &--text {
+            width: 100%;
+            padding: 20px 13px 80px 13px;
+            margin-top: 25px;
+        }
+        &--btn {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            & button {
+                background: $additional-color;
+                color: white;
+                line-height: 67%;
+                padding: 14px 25px;
+                border: none;
+                margin-top: 27px;
+                cursor: pointer;
+                &:hover {
+                    background: $accent-color;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    background: $primary-color;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 160px;
+    & a {
+        text-decoration: none;
+        color: white;
+        padding-bottom: 10px;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    &__email {
+        font-size: 2rem;
+    }
+    &__phone {
+        font-size: 1.8rem;
+    }
+    &__link {
+        font-size: 16px;
+        padding-top: 20px;
+        text-decoration: solid;
+    }
+}
