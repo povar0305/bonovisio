@@ -218,10 +218,10 @@
 
 	<div class="form">
     <p class="form__title" data-aos="fade-right" >Отправить сообщение</p>
-    <form class="form__inner">
-        <input type="text" class="form__inner--name" data-aos="fade-left"placeholder="Ваше имя">
-        <input type="email" class="form__inner--email"data-aos="fade-right" placeholder="Email">
-        <input type="text" class="form__inner--text" data-aos="fade-left"placeholder="Ваше сообщение">
+    <form id="form1" class="form__inner" onsubmit="formValidation()">
+        <input name="name"  class="form__inner--name" data-aos="fade-left"placeholder="Ваше имя">
+        <input name="email"  class="form__inner--email"data-aos="fade-right" placeholder="Email">
+        <input name="text"  class="form__inner--text" data-aos="fade-left"placeholder="Ваше сообщение">
         <div class="form__inner--btn" data-aos="fade-right">
         <button type="submit" >Отправить</button> 
         </div>
