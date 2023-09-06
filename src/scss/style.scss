@@ -458,10 +458,25 @@ button {
     padding: 139px 220px;
     background: $primary-color;
     width: 100%;
+    @media (max-width: $ipad-size) {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    @media (max-width: $mobile-size) {
+        padding-top: 75px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     &__title {
         color: white;
         font-size: 60px;
         padding-bottom: 60px;
+        @media (max-width: $mobile-size) {
+            padding-bottom: 80px;
+        }
     }
     &__inner {
         display: flex;
@@ -474,15 +489,25 @@ button {
                 border: 1px solid #fb5555;
             }
         }
+        &--name {
+            @media (max-width: $mobile-size) {
+                margin-bottom: 25px;
+            }
+        }
         &--name,
         &--email {
             width: calc(50% - 13px);
             padding: 11px 20px;
+            @media (max-width: $mobile-size) {
+                width: 100%;
+            }
         }
         &--text {
             width: 100%;
             padding: 20px 13px 80px 13px;
             margin-top: 25px;
+            @media(max-width: $mobile-size){margin-bottom: 138px;}
+
         }
         &--btn {
             width: 100%;
@@ -499,6 +524,8 @@ button {
                 &:hover {
                     background: $accent-color;
                 }
+                @media(max-width: $mobile-size){width: 100%;}
+
             }
         }
     }
@@ -511,6 +538,10 @@ button {
     flex-direction: column;
     align-items: center;
     padding-bottom: 160px;
+    @media (max-width: $ipad-size) {
+        padding-bottom: 80px;
+    }
+
     & a {
         text-decoration: none;
         color: white;
