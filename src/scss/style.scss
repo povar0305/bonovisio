@@ -9,6 +9,9 @@ $transition: 0.2s;
 
 $ipad-size: 768px;
 $mobile-size: 460px;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +20,9 @@ body {
     width: 100%;
     margin: auto;
 }
-
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 a,
 button {
     transition: $transition;
@@ -313,6 +318,8 @@ button {
             font-size: 20px;
             line-height: 130%;
             padding-bottom: 41px;
+            font-weight: bold;
+
         }
         &--p3 {
             color: white;
