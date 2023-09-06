@@ -1,4 +1,6 @@
 
+AOS.init();
+console.log(AOS)
 const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',

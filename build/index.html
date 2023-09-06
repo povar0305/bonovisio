@@ -23,6 +23,8 @@
 	<link rel="stylesheet"
 				href="css/style.min.css">
 	<title></title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 
@@ -78,18 +80,18 @@
             Конференция
         </p>
         <div class="about__titles">
-            <p class="about__titles--date">12 ноября</p>
-            <p class="about__titles--title">This Year</p>
-            <p class="about__titles--title">Next Year</p>
+            <p class="about__titles--date" data-aos="fade-right">12 ноября</p>
+            <p class="about__titles--title" data-aos="fade-left">This Year</p>
+            <p class="about__titles--title" data-aos="fade-right">Next Year</p>
             <div class="about__partners">
                 <img src="/img/groupt.png" alt="">
                 <img src="/img/mindshare.png" alt="">
                 <img src="/img/mediacom.png" alt="">
                 <img src="/img/wm.png" alt="">
             </div>
-            <button class="about__registr">Зарегистрироваться</button>
+            <button class="about__registr" data-aos="fade-down">Зарегистрироваться</button>
         </div>
-        <div class="about__texts">
+        <div class="about__texts" data-aos="fade-up">
             <p class="about__texts--p2">Команда рекламного холдинга GroupM рада
                 открыть для вас двери digital-конференции NextM!</p>
             <p class="about__texts--p3">NextM – это ежегодная digital-конференция,
@@ -97,18 +99,18 @@
                 холдинга WPP и представленной в России агентствами Mindshare, MediaCom и Wavemaker.</p>
         </div>
 
-        
-        <img src="/img/about__bg.png" alt="" class="about__bg">
+
+        <img src="/img/about__bg.png" alt="" class="about__bg" data-aos="fade-right">
     </div>
     <a href="#" class="about__arrow">
-            <svg width="87" height="31" viewBox="0 0 87 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.999999 0.999999L43.5 29L86 0.999995" stroke="white" stroke-width="2" />
-            </svg>
-        </a>
+        <svg width="87" height="31" viewBox="0 0 87 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.999999 0.999999L43.5 29L86 0.999995" stroke="white" stroke-width="2" />
+        </svg>
+    </a>
 </div>
 	<div class="speakers">
-    <p class="speakers__title">Спикеры</p>
-    <div class="speakers__wrapper">
+    <p class="speakers__title " data-aos="fade-up">Спикеры</p>
+    <div class="speakers__wrapper" data-aos="fade-up">
         <div class="speakers__arrows">
             <div class="swiper-button-prev">
                 <svg width="31" height="87" viewBox="0 0 31 87" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,29 +215,27 @@
     </div>
 
 </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<div class="form">
-    <p class="form__title">Отправить сообщение</p>
+    <p class="form__title" data-aos="fade-right" >Отправить сообщение</p>
     <form class="form__inner">
-        <input type="text" class="form__inner--name" placeholder="Ваше имя">
-        <input type="email" class="form__inner--email" placeholder="Email">
-        <input type="text" class="form__inner--text" placeholder="Ваше сообщение">
-        <div class="form__inner--btn">
+        <input type="text" class="form__inner--name" data-aos="fade-left"placeholder="Ваше имя">
+        <input type="email" class="form__inner--email"data-aos="fade-right" placeholder="Email">
+        <input type="text" class="form__inner--text" data-aos="fade-left"placeholder="Ваше сообщение">
+        <div class="form__inner--btn" data-aos="fade-right">
         <button type="submit" >Отправить</button> 
         </div>
     </form>
 </div>
 	<footer class="footer">
-    <a class="footer__email" href="mailto:info@groupmnextm.ru">info@groupmnextm.ru</a>
-    <a class="footer__phone" href="tel:+74596414080">+7 (459) 641-40-80</a>
-    <a class="footer__link" href="#">Правовая информация</a>
+    <a class="footer__email" data-aos="fade-up" href="mailto:info@groupmnextm.ru">info@groupmnextm.ru</a>
+    <a class="footer__phone" data-aos="fade-up" href="tel:+74596414080">+7 (459) 641-40-80</a>
+    <a class="footer__link" data-aos="fade-up" href="#">Правовая информация</a>
 </footer>
-	<script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="js/main.min.js"></script>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </body>
-
-
 </html>
